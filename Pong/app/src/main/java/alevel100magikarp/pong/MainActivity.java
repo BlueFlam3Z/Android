@@ -1,9 +1,11 @@
 package alevel100magikarp.pong;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
 
@@ -37,5 +39,10 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void startGame(View view) {
+        Intent intent = new Intent(this, game.class);
+        startActivity(intent);
     }
 }
